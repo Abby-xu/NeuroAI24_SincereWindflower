@@ -2,19 +2,18 @@ import torch #pytorch
 import torch.nn as nn
 from torch.autograd import Variable 
 
-class LSTM1(nn.Module):
-    def __init__(self, num_classes, input_size, hidden_size, num_layers, seq_length):
-        super(LSTM1, self).__init__()
-        self.num_classes = num_classes #number of classes
+# LSTM with fully connected layer 
+class LSTM_FC(nn.Module):
+    def __init__(self, output_size, input_size, hidden_size, num_layers):
+        super(LSTM_FC, self).__init__()
+        self.output_size = output_size #number of classes
         self.num_layers = num_layers #number of layers
         self.input_size = input_size #input size
         self.hidden_size = hidden_size #hidden state
-        self.seq_length = seq_length #sequence length
 
-        self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size,
-                          num_layers=num_layers, batch_first=True) #lstm
+        self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size,num_layers=num_layers, batch_first=True) #lstm
         self.fc_1 =  nn.Linear(hidden_size, 128) #fully connected 1
-        self.fc = nn.Linear(128, num_classes) #fully connected last layer
+        self.fc = nn.Linear(128, output_size) #fully connected last layer
 
         self.relu = nn.ReLU()
     
@@ -28,5 +27,25 @@ class LSTM1(nn.Module):
         out = self.fc_1(out) #first Dense
         out = self.relu(out) #relu
         out = self.fc(out) #Final Output
-        return out
+        return out, hn, cn #returns output and hidden state
+
+# "Clasic" LSTM (i.e., without fully connected layer)
+class LSTM_Vanilla (nn.Module):
+    def __init__(self,output_size, input_size, hidden_size, num_layers):
+        super().__init__()
+        self.output_size = output_size #number of classes
+        self.num_layers = num_layers #number of layers
+        self.input_size = input_size #input size
+        self.hidden_size = hidden_size #hidden state
+        self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers, batch_first=True)
+        self.linear = nn.Linear(50, 1)
+
+    def forward(self, x):
+        h_0 = Variable(torch.zeros(self.num_layers, x.size(0), self.hidden_size)) #hidden state
+        c_0 = Variable(torch.zeros(self.num_layers, x.size(0), self.hidden_size)) #internal state
+        x, (hn, cn) = self.lstm(x,(h_0, c_0))
+        x = self.linear(x)
+        return x, hn, cn
+    
+
     
