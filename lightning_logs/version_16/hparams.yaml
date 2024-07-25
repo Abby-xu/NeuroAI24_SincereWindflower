@@ -1,0 +1,3048 @@
+batch_size: 256
+data_env: !!python/object:ctd.task_modeling.task_env.task_env.RandomTarget
+  __name__: Env
+  _action_noise: 0.0
+  _backward_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _buffers: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+  - []
+  _is_full_backward_hook: null
+  _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _modules: !!python/object/apply:collections.OrderedDict
+  - - - effector
+      - &id001 !!python/object:motornet.effector.RigidTendonArm26
+        MusclePaths: []
+        __name__: Effector
+        _backward_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _buffers: !!python/object/apply:collections.OrderedDict
+        - []
+        _forward_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+        - []
+        _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+        - []
+        _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+        - []
+        _integrate: !!python/object/apply:builtins.getattr
+        - *id001
+        - _euler
+        _is_full_backward_hook: null
+        _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _modules: !!python/object/apply:collections.OrderedDict
+        - - - skeleton
+            - &id002 !!python/object:motornet.skeleton.TwoDofArm
+              I1: 0.051
+              I2: 0.057
+              L1: 0.309
+              L1g: 0.135
+              L2: 0.333
+              L2g: 0.165
+              __name__: two_dof_arm
+              _backward_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _buffers: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+              - []
+              _is_full_backward_hook: null
+              _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _modules: !!python/object/apply:collections.OrderedDict
+              - []
+              _non_persistent_buffers_set: !!set {}
+              _parameters: !!python/object/apply:collections.OrderedDict
+              - - - inertia_m
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE4NjcwMzM2MHECWAMAAABjcHVxA0sETnRxBFEugAJdcQBYCQAAADE4NjcwMzM2
+                          MHEBYS4EAAAAAAAAABRRFT4UUZU9FFGVPQAAAAA=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 2
+                        - 2
+                      - !!python/tuple
+                        - 4
+                        - 2
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - inertia_c
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2NTEwNTQ0MHECWAMAAABjcHVxA0sETnRxBFEugAJdcQBYCQAAADE2NTEwNTQ0
+                          MHEBYS4EAAAAAAAAAIQeoj7ed8Q93nfEPd53xD0=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 2
+                        - 2
+                      - !!python/tuple
+                        - 4
+                        - 2
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - pos_upper_bound
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2Njc1NzcxMnECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE2Njc1Nzcx
+                          MnEBYS4CAAAAAAAAAOTLFkD8Ii1A
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 2
+                      - !!python/tuple
+                        - 2
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - pos_lower_bound
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE4Mzg2NDU2MHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE4Mzg2NDU2
+                          MHEBYS4CAAAAAAAAAAAAAAAAAAAA
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 2
+                      - !!python/tuple
+                        - 2
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - vel_upper_bound
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2MTUyNTQwOHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE2MTUyNTQw
+                          OHEBYS4CAAAAAAAAAAAAekQAAHpE
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 2
+                      - !!python/tuple
+                        - 2
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - vel_lower_bound
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE3NDc2Mzc3NnECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE3NDc2Mzc3
+                          NnEBYS4CAAAAAAAAAAAAesQAAHrE
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 2
+                      - !!python/tuple
+                        - 2
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+              _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              built: true
+              c_viscosity: 0.0
+              clip: !!python/name:motornet.skeleton._clip ''
+              clip_position: !!python/object/apply:builtins.getattr
+              - *id002
+              - clip_method
+              coriolis_1: -0.07290855
+              coriolis_2: 0.07290855
+              default_endpoint_load: !!python/object/apply:torch._utils._rebuild_tensor_v2
+              - !!python/object/apply:torch.storage._load_from_bytes
+                - !!binary |
+                  gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                  AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                  aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                  Z2UKcQFYCQAAADE3ODUwODU3NnECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE3ODUwODU3
+                  NnEBYS4CAAAAAAAAAAAAAAAAAAAA
+              - 0
+              - !!python/tuple
+                - 1
+                - 2
+              - !!python/tuple
+                - 2
+                - 1
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+              dof: 2
+              dt: 0.01
+              geometry_state_dim: 4
+              i1: 0.051
+              i2: 0.057
+              init: false
+              input_dim: 2
+              l1: 0.309
+              l1g: 0.135
+              l2: 0.333
+              l2g: 0.165
+              m1: 1.82
+              m2: 1.43
+              output_dim: 4
+              space_dim: 2
+              state_dim: 4
+              training: false
+          - - muscle
+            - !!python/object:motornet.muscle.MujocoHillMuscle
+              __name__: MujocoHillMuscle
+              _backward_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _buffers: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+              - []
+              _is_full_backward_hook: null
+              _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _modules: !!python/object/apply:collections.OrderedDict
+              - []
+              _non_persistent_buffers_set: !!set {}
+              _parameters: !!python/object/apply:collections.OrderedDict
+              - - - min_activation
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2OTkxMzEzNnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE2OTkxMzEz
+                          NnEBYS4BAAAAAAAAAAAAAAA=
+                      - 0
+                      - !!python/tuple []
+                      - !!python/tuple []
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - tau_activation
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2OTAxNDA0OHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE2OTAxNDA0
+                          OHEBYS4BAAAAAAAAAArXIzw=
+                      - 0
+                      - !!python/tuple []
+                      - !!python/tuple []
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - tau_deactivation
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE4MDg3OTAwOHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE4MDg3OTAw
+                          OHEBYS4BAAAAAAAAAArXIz0=
+                      - 0
+                      - !!python/tuple []
+                      - !!python/tuple []
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - max_iso_force
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2MTc4OTkwNHECWAMAAABjcHVxA0sGTnRxBFEugAJdcQBYCQAAADE2MTc4OTkw
+                          NHEBYS4GAAAAAAAAAACAUUQA4JZEAMCxRACgwUQAAM9DAMAWRA==
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 6
+                      - !!python/tuple
+                        - 6
+                        - 6
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - l0_pe
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE3MDkwMDg2NHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3MDkwMDg2
+                          NHEBYS4BAAAAAAAAAGZmpj8=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - l0_ce
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE4MjQxOTY4MHECWAMAAABjcHVxA0sGTnRxBFEugAJdcQBYCQAAADE4MjQxOTY4
+                          MHEBYS4GAAAAAAAAAEw3CT4pXA8+f2q8Pcl2vj26SQw+SgwCPg==
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 6
+                      - !!python/tuple
+                        - 6
+                        - 6
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - l0_se
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE3OTMyOTk1MnECWAMAAABjcHVxA0sGTnRxBFEugAJdcQBYCQAAADE3OTMyOTk1
+                          MnEBYS4GAAAAAAAAAHe+Hz0CK4c9xSAwPu58Pz5g5VA+PzVePg==
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 6
+                      - !!python/tuple
+                        - 6
+                        - 6
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - lmin
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2MTg1NDAwMHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE2MTg1NDAw
+                          MHEBYS4BAAAAAAAAAAAAAD8=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - lmax
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE3MTU3OTIzMnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3MTU3OTIz
+                          MnEBYS4BAAAAAAAAAM3MzD8=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - vmax
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE2OTEyODMyMHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE2OTEyODMy
+                          MHEBYS4BAAAAAAAAAAAAwD8=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - fvmax
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE3MzMwMDgzMnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3MzMwMDgz
+                          MnEBYS4BAAAAAAAAAJqZmT8=
+                      - 0
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - !!python/tuple
+                        - 1
+                        - 1
+                        - 1
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+                - - zero_as_tensor
+                  - !!python/object/apply:torch._utils._rebuild_parameter
+                    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                      - !!python/object/apply:torch.storage._load_from_bytes
+                        - !!binary |
+                          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                          Z2UKcQFYCQAAADE3ODUwNTUwNHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3ODUwNTUw
+                          NHEBYS4BAAAAAAAAAAAAAAA=
+                      - 0
+                      - !!python/tuple []
+                      - !!python/tuple []
+                      - false
+                      - !!python/object/apply:collections.OrderedDict
+                        - []
+                    - false
+                    - !!python/object/apply:collections.OrderedDict
+                      - []
+              _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+              - []
+              b: !!python/object/apply:torch._utils._rebuild_tensor_v2
+              - !!python/object/apply:torch.storage._load_from_bytes
+                - !!binary |
+                  gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                  AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                  aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                  Z2UKcQFYCQAAADE2MjI0NjU5MnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE2MjI0NjU5
+                  MnEBYS4BAAAAAAAAAGZmpj8=
+              - 0
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+              built: true
+              c: !!python/object/apply:torch._utils._rebuild_tensor_v2
+              - !!python/object/apply:torch.storage._load_from_bytes
+                - !!binary |
+                  gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                  AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                  aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                  Z2UKcQFYCQAAADE3NTA5NDgzMnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3NTA5NDgz
+                  MnEBYS4BAAAAAAAAANDMTD4=
+              - 0
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+              dt: 0.01
+              input_dim: 1
+              mid: !!python/object/apply:torch._utils._rebuild_tensor_v2
+              - !!python/object/apply:torch.storage._load_from_bytes
+                - !!binary |
+                  gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                  AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                  aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                  Z2UKcQFYCQAAADE3NTU0MTkyMHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3NTU0MTky
+                  MHEBYS4BAAAAAAAAAJqZOT8=
+              - 0
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+              n_muscles: 6
+              output_dim: 1
+              p1: !!python/object/apply:torch._utils._rebuild_tensor_v2
+              - !!python/object/apply:torch.storage._load_from_bytes
+                - !!binary |
+                  gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                  AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                  aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                  Z2UKcQFYCQAAADE3NDY4MTA1NnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3NDY4MTA1
+                  NnEBYS4BAAAAAAAAAJiZmT4=
+              - 0
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+              p2: !!python/object/apply:torch._utils._rebuild_tensor_v2
+              - !!python/object/apply:torch.storage._load_from_bytes
+                - !!binary |
+                  gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                  AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                  aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                  Z2UKcQFYCQAAADE3Mzc0NDczNnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE3Mzc0NDcz
+                  NnEBYS4BAAAAAAAAAGZmpj4=
+              - 0
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - !!python/tuple
+                - 1
+                - 1
+                - 1
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+              passive_forces: 1.0
+              state_dim: 7
+              state_name:
+              - activation
+              - muscle length
+              - muscle velocity
+              - force-length PE
+              - force-length CE
+              - force-velocity CE
+              - force
+              to_build_dict: &id006
+                fvmax:
+                - 1.2
+                lmax:
+                - 1.6
+                lmin:
+                - 0.5
+                max_isometric_force:
+                - 838
+                - 1207
+                - 1422
+                - 1549
+                - 414
+                - 603
+                normalized_slack_muscle_length:
+                - 1.3
+                optimal_muscle_length:
+                - 0.134
+                - 0.14
+                - 0.092
+                - 0.093
+                - 0.137
+                - 0.127
+                tendon_length:
+                - 0.039
+                - 0.066
+                - 0.172
+                - 0.187
+                - 0.204
+                - 0.217
+                vmax:
+                - 1.5
+              to_build_dict_default: &id005
+                fvmax: 1.2
+                lmax: 1.6
+                lmin: 0.5
+                normalized_slack_muscle_length: 1.3
+                vmax: 1.5
+              training: false
+        _muscle_config_is_empty: true
+        _muscle_index: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - &id003 !!python/name:numpy.ndarray ''
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 0
+          - &id004 !!python/object/apply:numpy.dtype
+            args:
+            - f4
+            - false
+            - true
+            state: !!python/tuple
+            - 3
+            - <
+            - null
+            - null
+            - null
+            - -1
+            - -1
+            - 0
+          - false
+          - !!binary ""
+        _muscle_transitions: null
+        _non_persistent_buffers_set: !!set {}
+        _np_random: !!python/object/apply:numpy.random._pickle.__generator_ctor
+        - !!python/object/apply:numpy.random._pickle.__bit_generator_ctor
+          args:
+          - !!python/name:numpy.random._pcg64.PCG64 ''
+          state: !!python/tuple
+          - bit_generator: PCG64
+            has_uint32: 0
+            state:
+              inc: 21272843989075874673586704553146488531
+              state: 140668831110960634285519175589428161315
+            uinteger: 0
+          - !!python/object/apply:numpy.random.bit_generator.__pyx_unpickle_SeedSequence
+            args:
+            - !!python/name:numpy.random.bit_generator.SeedSequence ''
+            - 65708578
+            - null
+            state: !!python/tuple
+            - 299906013754453884597003155685855637923
+            - 0
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id003
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 4
+              - !!python/object/apply:numpy.dtype
+                args:
+                - u4
+                - false
+                - true
+                state: !!python/tuple
+                - 3
+                - <
+                - null
+                - null
+                - null
+                - -1
+                - -1
+                - 0
+              - false
+              - !!binary |
+                MJNUPnIFpYQZ8kLyuD3+CA==
+            - 4
+            - !!python/tuple []
+        _parameters: !!python/object/apply:collections.OrderedDict
+        - - - damping
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE4NDk3OTIzMnECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADE4NDk3OTIz
+                    MnEBYS4BAAAAAAAAAAAAAAA=
+                - 0
+                - !!python/tuple []
+                - !!python/tuple []
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - pos_range_bound
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE1ODQ5NzYwMHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE1ODQ5NzYw
+                    MHEBYS4CAAAAAAAAAOTLFsD8Ii3A
+                - 0
+                - !!python/tuple
+                  - 2
+                - !!python/tuple
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - vel_range_bound
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE1ODk3MjkyOHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE1ODk3Mjky
+                    OHEBYS4CAAAAAAAAAAAA+sQAAPrE
+                - 0
+                - !!python/tuple
+                  - 2
+                - !!python/tuple
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - default_endpoint_load
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE2MDE4MzA4OHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE2MDE4MzA4
+                    OHEBYS4CAAAAAAAAAAAAAAAAAAAA
+                - 0
+                - !!python/tuple
+                  - 1
+                  - 2
+                - !!python/tuple
+                  - 2
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - default_joint_load
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE2MDkwOTEwNHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE2MDkwOTEw
+                    NHEBYS4CAAAAAAAAAAAAAAAAAAAA
+                - 0
+                - !!python/tuple
+                  - 1
+                  - 2
+                - !!python/tuple
+                  - 2
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - a0
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE3OTQ3NDIyNHECWAMAAABjcHVxA0sGTnRxBFEugAJdcQBYCQAAADE3OTQ3NDIy
+                    NHEBYS4GAAAAAAAAAL6fGj7WxW0+fGGSPukmcT7ecao+bAmZPg==
+                - 0
+                - !!python/tuple
+                  - 1
+                  - 1
+                  - 6
+                - !!python/tuple
+                  - 6
+                  - 6
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - a1
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE4MjQyODk5MnECWAMAAABjcHVxA0sMTnRxBFEugAJdcQBYCQAAADE4MjQyODk5
+                    MnEBYS4MAAAAAAAAAI/C9byPwvU8AAAAAAAAAACPwvW8j8L1PAAAAAAAAAAAQmBlvM3MzDxvEoO8
+                    j8L1PA==
+                - 0
+                - !!python/tuple
+                  - 1
+                  - 2
+                  - 6
+                - !!python/tuple
+                  - 12
+                  - 6
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - a2
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE3ODcyNDI0MHECWAMAAABjcHVxA0sMTnRxBFEugAJdcQBYCQAAADE3ODcyNDI0
+                    MHEBYS4MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbxKDu+AtELsRx7q7
+                    F7dRuw==
+                - 0
+                - !!python/tuple
+                  - 1
+                  - 2
+                  - 6
+                - !!python/tuple
+                  - 12
+                  - 6
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+          - - a3
+            - !!python/object/apply:torch._utils._rebuild_parameter
+              - !!python/object/apply:torch._utils._rebuild_tensor_v2
+                - !!python/object/apply:torch.storage._load_from_bytes
+                  - !!binary |
+                    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+                    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+                    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+                    Z2UKcQFYCQAAADE3ODg4Mjg2NHECWAMAAABjcHVxA0sCTnRxBFEugAJdcQBYCQAAADE3ODg4Mjg2
+                    NHEBYS4CAAAAAAAAANsPyT8AAAAA
+                - 0
+                - !!python/tuple
+                  - 1
+                  - 2
+                  - 1
+                - !!python/tuple
+                  - 2
+                  - 1
+                  - 1
+                - false
+                - !!python/object/apply:collections.OrderedDict
+                  - []
+              - false
+              - !!python/object/apply:collections.OrderedDict
+                - []
+        _path_coordinates: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - *id003
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 1
+            - 2
+            - 0
+          - *id004
+          - false
+          - !!binary ""
+        _path_fixation_body: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - *id003
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 1
+            - 1
+            - 0
+          - *id004
+          - false
+          - !!binary ""
+        _row_splits: null
+        _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+        - []
+        dof: 2
+        dt: 0.01
+        force_index: 6
+        geometry_state_dim: 4
+        geometry_state_name:
+        - musculotendon length
+        - musculotendon velocity
+        - moment for joint 0
+        - moment for joint 1
+        half_minidt: 0.005
+        input_dim: 6
+        integration_method: euler
+        minidt: 0.01
+        muscle_index: null
+        muscle_name:
+        - pectoralis
+        - deltoid
+        - brachioradialis
+        - tricepslat
+        - biceps
+        - tricepslong
+        muscle_state_dim: 7
+        muscle_transitions: null
+        n_ministeps: 1
+        n_muscles: 6
+        output_dim: 4
+        path_coordinates: null
+        path_fixation_body: null
+        pos_lower_bound: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - *id003
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 2
+          - *id004
+          - false
+          - !!binary |
+            AAAAAAAAAAA=
+        pos_upper_bound: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - *id003
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 2
+          - *id004
+          - false
+          - !!binary |
+            5MsWQPwiLUA=
+        row_splits: null
+        section_splits: null
+        seed: null
+        space_dim: 2
+        state_dim: 4
+        states:
+          cartesian: !!python/object/apply:torch._utils._rebuild_tensor_v2
+          - !!python/object/apply:torch.storage._load_from_bytes
+            - !!binary |
+              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
+              AIAAAAAAzDKVPCglGT8AAACAAAAAAA==
+          - 0
+          - !!python/tuple
+            - 200
+            - 4
+          - !!python/tuple
+            - 4
+            - 1
+          - false
+          - !!python/object/apply:collections.OrderedDict
+            - []
+          fingertip: !!python/object/apply:torch._utils._rebuild_tensor_v2
+          - !!python/object/apply:torch.storage._load_from_bytes
+            - !!binary |
+              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
+              AIAAAAAAzDKVPCglGT8AAACAAAAAAA==
+          - 0
+          - !!python/tuple
+            - 200
+            - 2
+          - !!python/tuple
+            - 4
+            - 1
+          - false
+          - !!python/object/apply:collections.OrderedDict
+            - []
+          geometry: !!python/object/apply:torch._utils._rebuild_tensor_v2
+          - !!python/object/apply:torch.storage._load_from_bytes
+            - !!binary |
+              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
+              vPHozjw=
+          - 0
+          - !!python/tuple
+            - 200
+            - 4
+            - 6
+          - !!python/tuple
+            - 24
+            - 6
+            - 1
+          - false
+          - !!python/object/apply:collections.OrderedDict
+            - []
+          joint: !!python/object/apply:torch._utils._rebuild_tensor_v2
+          - !!python/object/apply:torch.storage._load_from_bytes
+            - !!binary |
+              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
+              AAAAAAAAHOKTP5SyPT8AAAAAAAAAAA==
+          - 0
+          - !!python/tuple
+            - 200
+            - 4
+          - !!python/tuple
+            - 4
+            - 1
+          - false
+          - !!python/object/apply:collections.OrderedDict
+            - []
+          muscle: !!python/object/apply:torch._utils._rebuild_tensor_v2
+          - !!python/object/apply:torch.storage._load_from_bytes
+            - !!binary |
+              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
+          - 0
+          - !!python/tuple
+            - 200
+            - 7
+            - 6
+          - !!python/tuple
+            - 42
+            - 6
+            - 1
+          - false
+          - !!python/object/apply:collections.OrderedDict
+            - []
+        tobuild__default: *id005
+        tobuild__muscle: *id006
+        training: false
+        vel_lower_bound: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - *id003
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 2
+          - *id004
+          - false
+          - !!binary |
+            AAB6xAAAesQ=
+        vel_upper_bound: !!python/object/apply:numpy._core.multiarray._reconstruct
+          args:
+          - *id003
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 2
+          - *id004
+          - false
+          - !!binary |
+            AAB6RAAAekQ=
+  _non_persistent_buffers_set: !!set {}
+  _obs_noise: 0.0
+  _parameters: !!python/object/apply:collections.OrderedDict
+  - []
+  _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  action_frame_stacking: 0
+  action_noise:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  action_space: !!python/object:gymnasium.spaces.box.Box
+    _np_random: null
+    _shape: !!python/tuple
+    - 6
+    bounded_above: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 6
+      - &id007 !!python/object/apply:numpy.dtype
+        args:
+        - b1
+        - false
+        - true
+        state: !!python/tuple
+        - 3
+        - '|'
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - false
+      - !!binary |
+        AQEBAQEB
+    bounded_below: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 6
+      - *id007
+      - false
+      - !!binary |
+        AQEBAQEB
+    dtype: &id008 !!python/object/apply:numpy.dtype
+      args:
+      - f4
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    high: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 6
+      - *id004
+      - false
+      - !!binary |
+        AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/
+    high_repr: '1.0'
+    low: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 6
+      - *id004
+      - false
+      - !!binary |
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    low_repr: '0.0'
+  bump_mag_high: 10
+  bump_mag_low: 5
+  context_inputs: !!python/object:gymnasium.spaces.box.Box
+    _np_random: null
+    _shape: !!python/tuple
+    - 3
+    bounded_above: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 3
+      - *id007
+      - false
+      - !!binary |
+        AQEB
+    bounded_below: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 3
+      - *id007
+      - false
+      - !!binary |
+        AQEB
+    dtype: *id008
+    high: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 3
+      - *id004
+      - false
+      - !!binary |
+        AAAAQAAAAEAAAABA
+    high_repr: '2.0'
+    low: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 3
+      - *id004
+      - false
+      - !!binary |
+        AAAAwAAAAMAAAADA
+    low_repr: '-2.0'
+  coupled_env: true
+  dataset_name: RandomTarget
+  delay_range:
+  - 0
+  - 0
+  differentiable: true
+  dt: 0.01
+  elapsed: 0.0
+  goal: !!python/object/apply:torch._utils._rebuild_tensor_v2
+  - !!python/object/apply:torch.storage._load_from_bytes
+    - !!binary |
+      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
+      AAAAAAAA0gmsvmHjBL4AAAAAAAAAgA==
+  - 0
+  - !!python/tuple
+    - 200
+    - 2
+  - !!python/tuple
+    - 4
+    - 1
+  - false
+  - !!python/object/apply:collections.OrderedDict
+    - []
+  input_labels:
+  - TargetX
+  - TargetY
+  - GoCue
+  loss_func: !!python/object:ctd.task_modeling.task_env.loss_func.RandomTargetLoss
+    act_weight: 1.0
+    action_loss: !!python/object:torch.nn.modules.loss.MSELoss
+      _backward_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _buffers: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+      - []
+      _is_full_backward_hook: null
+      _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _modules: !!python/object/apply:collections.OrderedDict
+      - []
+      _non_persistent_buffers_set: !!set {}
+      _parameters: !!python/object/apply:collections.OrderedDict
+      - []
+      _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      reduction: mean
+      training: true
+    full_trial_epoch: 200
+    pos_weight: 1.0
+    position_loss: !!python/object:torch.nn.modules.loss.MSELoss
+      _backward_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _buffers: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+      - []
+      _is_full_backward_hook: null
+      _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _modules: !!python/object/apply:collections.OrderedDict
+      - []
+      _non_persistent_buffers_set: !!set {}
+      _parameters: !!python/object/apply:collections.OrderedDict
+      - []
+      _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+      - []
+      reduction: mean
+      training: true
+  max_ep_duration: 1.0
+  n_timesteps: !!python/object/apply:numpy._core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - i8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    ZAAAAAAAAAA=
+  nq_init: null
+  obs_buffer:
+    action: []
+    proprioception:
+    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+      - !!python/object/apply:torch.storage._load_from_bytes
+        - !!binary |
+          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
+      - 0
+      - !!python/tuple
+        - 200
+        - 12
+      - !!python/tuple
+        - 12
+        - 1
+      - false
+      - !!python/object/apply:collections.OrderedDict
+        - []
+    vision:
+    - !!python/object/apply:torch._utils._rebuild_tensor_v2
+      - !!python/object/apply:torch.storage._load_from_bytes
+        - !!binary |
+          gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+          AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+          aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+          Z2UKcQFYCQAAADE2NTYxMjc2OHECWAMAAABjcHVxA02QAU50cQRRLoACXXEAWAkAAAAxNjU2MTI3
+          NjhxAWEukAEAAAAAAADtNzy+ZvHNPhZoQb4vFQA/8PiLvrHWij54uaO+6gDRPpDzWL5OqLA+DOeJ
+          vtyzMz4tG0K+R5iLPtDyTr7JXJA+zdsvvuA4eT4ul6O+OPuZPuBZHb6EtBI/nwdbPvyE9z51hgw+
+          dLD1Psbw2z0IQeg+SbLBvunpnj7Ixlq+VzwEPwjfvTwEIxs/IhTIvjWq1T5Zc46+yMStPsDfojzN
+          kP0+D+GevgG/6z4QFIa+5O7/Pirq4T1sFwg/sLuFvBzX6T6+yR++7EPQPmgjf74C094+St2VvsWL
+          gz6rcYq+a2YOP1RFC72B2hE/VUO5vR5QGD8U0bu+bwOYPlGAmr7snZM+XFjRPQer7j4wAmi+6PB4
+          Prs9tr4xPoc+asHAvlMP5D5pJKK9WlwZP8SX+j2gjQ4/J/krvsxAGD8pPMa9ljUSP5bUKr7sgp0+
+          ZkInvo0m9j6eiw4+dL8MP7AJhb7YTr0+9BA4vmoU3z7oOsq+rYmHPvgXS70Eauc+dJsLPtfBGT+k
+          8LW+qznrPiy/WL7vpaE+DHfLvk3EbT4oRrI9iCQcPwczpz5KmPg+wnoOvioHxD5a43I+484GP9/Y
+          s77Xtwo+dh7pvYVzyT6l3pK+AS3KPhyypz7WNgM/rcSGvuAibz5Okly+giXGPgo/kz3ZUA0/SGKg
+          PrcOBT8a25O+uMPrPmB85byWcBo/ARiSvm5/BT/ILkq+4kroPsoJ0b5fuLA+v3h9vh8ZbD56xcy9
+          UibiPiHefb7gBAQ/N8wDvuVBxT6xz9093aUKPzhxbT7fVQE/MHwYvGEj9z5rzhO+RCesPuE1ub62
+          RhY+5+tTvs/mkD6gcvE7+oUUP1g9ab6l3nc+SOMiPaB0Gj+o2Y++QCKvPrpaw77SxdE+auijPgWu
+          9z7WFbk+zGf1PiAhpbvYTAI/8ReXvq5Wlj3HH7e+znvxPpCJ4T0uEfU+AMyvOp09Bj+g4rc8xIYR
+          P4iACb0giQE/2HdfPeZB9j5AHte8cbGrPuKtmb7P6gc/EOIRvZwryT7uDX0+RMsAP9LBl77qRqw+
+          YkI+PaBgET8oPzy+H+4LP6h4a71AfPs+YSZjvmsoDT9CbJ69PrMCP2tRhL7DHzQ+Md2gvlZGAD9s
+          XLK9ByHoPix2Tr7IZZk+41TmvSDAGD/oSbq+0znTPoyEvr06lhs/039/vsQ5DD8qiVe+EC39Pojz
+          Xb7hNq4+lhaFvv7QBz+o8rO+kWrqPrzoLr7SDII+6CqPvjscBT9Nu4C+cuaCPiBk+LwFCJw+6kU/
+          vgcVlT6Rezq+Ko4SPyha1z7e4uY+LsqZvuGuUj5ENOm9mD2hPkgwor78EO4+/HdjvgZQ+T7A3G+8
+          diARPy4fYD4xSQw/Tdc9vku4iz4ViI2+gO8GP9984z34cwo/NB+cPhyqCT8Jy4o+upQEPxoq5L2I
+          W/I+iSWyPd+FFz/w0p8+yfn4PrDBtb6YM9Y+qtGPvrsRvj73Qjo+NAkGP3kUdb64yA8/8oOlvSsV
+          0z6x0bO+1gTRPprYzL3YWZQ+ZL2NvoaO2D6m+Li+CkQSPqaOvL5EPa8+Ibkzvr/Yqj5A/Fo8O6oA
+          P/UBwb48cJI+8k+zvhyG0z5HYnK+F/AJP3mASL591Qw/wEZ1vJFOBj8heIc+JrAKP4zQob7kneY9
+          4giOvmah7z4nPY6+uLK8PviwMTyCiBg/LGj0vXw7sj5exaS+lDSRPhwbpj0uQxg/Vi9uvuwQaz71
+          KJC+vyBzPtoXFj5J/BM/F3+TvuC1xD6pE5q+5D1UPiZJH77+xKE+foCtvnZvdz6IKhu96EXGPqDj
+          k74DsBs+qs6ovoqd2D6YY728zsP4Ph36ob4KUMw+/2OKvvSgyz5aGJe+AKpPPrqorr0wP7M+98i3
+          vuh+9D2UEaW+rHubPUSmFb3qzs8+wtmGvgtlmD7qHQs+E9HxPjhPTb4WChA/nu0pvl+U0D6iflm+
+          DhfBPugDcr3AwsQ+jgZ3viwH7z7sO6M+owj6Pscsw766zFY+/9GtvsHP1z4ExFy+BD73PolLIb4r
+          3qQ+JMtRvWy5Gz+xQok+mNwDPzW8u75wh3w+is6bvrfBjT4TorO+sWNNPhTGHb1qMOI+MplVvjgb
+          gT5gS689kQjnPswylTwoJRk/
+      - 0
+      - !!python/tuple
+        - 200
+        - 2
+      - !!python/tuple
+        - 2
+        - 1
+      - false
+      - !!python/object/apply:collections.OrderedDict
+        - []
+  obs_noise:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  observation_space: !!python/object:gymnasium.spaces.box.Box
+    _np_random: null
+    _shape: !!python/tuple
+    - 14
+    bounded_above: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 14
+      - *id007
+      - false
+      - !!binary |
+        AAAAAAAAAAAAAAAAAAA=
+    bounded_below: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 14
+      - *id007
+      - false
+      - !!binary |
+        AAAAAAAAAAAAAAAAAAA=
+    dtype: *id008
+    high: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 14
+      - *id004
+      - false
+      - !!binary |
+        AACAfwAAgH8AAIB/AACAfwAAgH8AAIB/AACAfwAAgH8AAIB/AACAfwAAgH8AAIB/AACAfwAAgH8=
+    high_repr: inf
+    low: !!python/object/apply:numpy._core.multiarray._reconstruct
+      args:
+      - *id003
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 14
+      - *id004
+      - false
+      - !!binary |
+        AACA/wAAgP8AAID/AACA/wAAgP8AAID/AACA/wAAgP8AAID/AACA/wAAgP8AAID/AACA/wAAgP8=
+    low_repr: -inf
+  output_labels:
+  - Pec
+  - Delt
+  - Brad
+  - TriLong
+  - Biceps
+  - TriLat
+  proprioception_delay: 1
+  proprioception_noise:
+  - 0.0
+  q_init: null
+  seed: null
+  state_label: fingertip
+  training: false
+  vision_delay: 1
+  vision_noise:
+  - 0.0
+input_size: null
+learning_rate: 0.001
+model: null
+n_samples: 1000
+num_workers: 4
+output_size: null
+seed: 0
+task_env: null
+weight_decay: 1.0e-08
