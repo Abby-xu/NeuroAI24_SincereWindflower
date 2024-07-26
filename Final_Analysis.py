@@ -13,7 +13,7 @@ Models_fnames = os.listdir(Models_path)
 for model_fname in Models_fnames:
     # Load the analysis object with the model
     model_path = os.path.join(Models_path, model_fname, "")
-    analysis = Analysis_TT(run_name = "GRU_128_RT", filepath = model_path)
+    analysis = Analysis_TT(run_name = model_fname, filepath = model_path)
     
     # PLot 2 representative trials
     analysis.plot_trial_io(num_trials = 2)
@@ -23,6 +23,16 @@ for model_fname in Models_fnames:
     out_dict = analysis.get_model_outputs()
     latents = out_dict["latents"].detach().numpy()
     hand_pos = out_dict["controlled"].detach().numpy()
+
+    # Cahnge from tensor to numpy arrays
+    for key in out_dict.keys():
+        out_dict[key] = out_dict[key].detach().numpy()
+    
+    # Save the outputs to a csv file
+    df = pd.DataFrame(out_dict)
+    df.to_csv('{}_output'.format(model_fname), index=False)
+
+    # ANALYSIS...
 
     print("Model Inputs: ", inputs.shape)
 
